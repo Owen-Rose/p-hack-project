@@ -14,9 +14,18 @@ class CrimeStatistics():
     def getCrimeStatistics_List(self):
         print(self.crime_statistics_list)
 
-    def getCrimeCountMean(self):
+    def getCrimeCountByYear(self):
+        raw_count = []
+        yearly_count = []
+        crimeCount = 0
         for sublist in self.crime_statistics_list:
-            print(sublist[3])
+            raw_count += [[sublist[3], sublist[4]]]
+        years = [element[1] for element in raw_count]
+        years = [*set(years)]
+        years.sort()
+        years.pop()
+        for element in years:
+            print(element)
 
 class CrimeProbability():
 
@@ -29,4 +38,4 @@ class CrimeProbability():
 x = CrimeStatistics()
 
 x.readFile()
-x.getOverallCrimeCountMean()
+x.getCrimeCountByYear()
