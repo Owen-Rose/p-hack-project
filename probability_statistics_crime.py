@@ -1,4 +1,5 @@
 import csv
+import statistics
 
 class CrimeStatistics():
     crime_statistics_list = []
@@ -9,8 +10,13 @@ class CrimeStatistics():
             row_data = []
             for element in csvRead:
                 row_data += [[element[0], element[1], element[2], element[3], element[6]]]
-                print(row_data)
-    pass
+            self.crime_statistics_list = row_data
+    def getCrimeStatistics_List(self):
+        print(self.crime_statistics_list)
+
+    def getCrimeCountMean(self):
+        for sublist in self.crime_statistics_list:
+            print(sublist[3])
 
 class CrimeProbability():
 
@@ -23,3 +29,4 @@ class CrimeProbability():
 x = CrimeStatistics()
 
 x.readFile()
+x.getOverallCrimeCountMean()
