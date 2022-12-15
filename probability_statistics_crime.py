@@ -1,6 +1,6 @@
-class Crime_statistics():
+class CrimeStatistics():
     pass
 
-class Crime_probability():
+class CrimeProbability():
     pass
 
