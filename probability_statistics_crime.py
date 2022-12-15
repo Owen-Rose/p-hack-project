@@ -2,5 +2,6 @@ class CrimeStatistics():
     pass
 
 class CrimeProbability():
-    pass
+        def __init__(self):
+            pass
 
